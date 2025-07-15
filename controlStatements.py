@@ -214,3 +214,54 @@ fruits = ["apple", "banana", "cherry"]
 for x in adj:
   for y in fruits:
     print(x, y)
+
+
+# Nested if-elif-else with for loop
+
+students = {
+    'Aman': 92,
+    'Neha': 76,
+    'Ravi': 59,
+    'Pooja': 85,
+    'Karan': 44
+}
+
+for name, score in students.items():
+    print(f"\nEvaluating {name}'s performance:")
+
+    if score >= 90:
+        print("Grade: A - Excellent")
+    elif score >= 75:
+        print("Grade: B - Good")
+    elif score >= 60:
+        print("Grade: C - Average")
+    elif score >= 40:
+        print("Grade: D - Needs Improvement")
+    else:
+        print("Grade: F - Fail")
+
+
+
+# Using while with break and continue
+# Scenario: Simulate a user login system with 3 attempts.
+
+correct_password = "python123"
+attempts = 0
+max_attempts = 3
+
+while attempts < max_attempts:
+    password = input("Enter password: ")
+    
+    if password == "":
+        print("Empty input! Try again.")
+        continue  # skip counting this as an attempt
+
+    if password == correct_password:
+        print("Login successful!")
+        break
+    else:
+        print("Incorrect password.")
+        attempts += 1
+
+if attempts == max_attempts:
+    print("Too many failed attempts. Account locked.")
