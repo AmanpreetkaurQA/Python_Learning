@@ -119,6 +119,12 @@ for i in range(len(thislist)):
 
 # List Comprehension
 # List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+# newlist = [expression for item in iterable if condition == True]
+# The return value is a new list, leaving the old list unchanged.
 # Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
 freshlist = [x for x in thislist if "a" in x]
 print(freshlist)
+
+
+newlist = [x for x in fruits if x != "apple"]
+print(newlist)
